@@ -28,26 +28,38 @@ Este projeto é uma Caixa de Areia de Realidade Aumentada que simula relevos e n
 ## Instalação
 
 ### 1. Preparação do Ambiente
-- **a) Linux (recomendado para Kinect)**
+**a) Criação de um Ambiente Virtual**
 
-- **Drivers do Kinect:**
+**1. Crie o ambiente virtual:**
+    
+    python -m venv venv
 
-  - **Kinect v1: Instale o libfreenect com o comando:**
-        
-        sudo apt-get install freenect
+**2. Ative o ambiente virtual:**
 
-- **Kinect v2:** Utilize o SDK do Kinect para Windows ou Linux, ou a biblioteca libfreenect2.
+- No Windows:
+    ```
+    venv\Scripts\activate
+- No macOS e Linux:
+    ```
+    source venv/bin/activate
+**b) Instalação dos Drivers do Kinect**
 
-**b) Windows (compatível com Kinect e Webcam)**
+- **No Linux:**
 
-**Drivers do Kinect:**
+    - **Kinect v1:** Instale o `libfreenect` com o comando:
+    ```
+    sudo apt-get install freenect
+    ```
+    - **Kinect v2:** Utilize o SDK do Kinect para Linux, ou a biblioteca `libfreenect2`.
+
+- **No Windows:**
 
 Baixe e instale o Kinect SDK para o seu modelo:
- - Kinect v1 SDK:
+ - **Kinect v1 SDK:**
 
     https://www.microsoft.com/en-us/download/details.aspx?id=40278
 
- - Kinect v2 SDK:
+ - **Kinect v2 SDK:**
 
     https://www.microsoft.com/en-us/download/details.aspx?id=44561
 
@@ -58,6 +70,10 @@ Baixe e instale o Kinect SDK para o seu modelo:
     ```
     git clone https://github.com/brunoramalho01/SARndBox-Python.git
     cd SARndBox-Python
+- Ative o ambiente virtual, se ainda não estiver ativado:
+    ```
+    source venv/bin/activate  # Para Linux e macOS
+    venv\Scripts\activate     # Para Windows
 - Instale as dependências do Python:
     ```
     pip install opencv-python numpy
